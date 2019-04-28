@@ -35,10 +35,10 @@ def remove_non_strings(array)
 end
 
 
-
-#def count_elements
-
-#end
+def count_elements(array)
+  array.inject(...) do |category, (key, value)|
+    category[value] += 1
+end
 
 #def merge_data
 

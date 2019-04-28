@@ -35,19 +35,37 @@ def remove_non_strings(array)
 end
 
 
-def count_elements(array)
-  array.inject(...) do |category, (key, value)|
-    category[value] += 1
+#def count_elements(array)
+
+  #array.inject(...) do |category, (key, value)|
+  #  category[value] += 1
+#  end
+#end
+#end
+
+def merge_data
+
 end
 
-#def merge_data
+def find_cool(hash)
+  hash.select do |key|
+    if key.has_value?("cool")
+      return hash
+      end
+    end
+  hash
+end
 
-#end
-
-#def find_cool
-
-#end
-
-#def organize_schools
-
-#end
+def organize_schools(schools)
+    by_location = {}
+      schools.each do |school, location|
+        location.each do |location_k, location_v|
+          if by_location[location_v] == nil
+            by_location[location_v] = [school]
+          else
+            by_location[location_v] << school
+          end
+        end
+        by_location
+      end
+    end
